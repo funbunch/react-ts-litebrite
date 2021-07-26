@@ -5,7 +5,16 @@ import { useHistory } from 'react-router-dom'
 
 const colors = ["red", "orange", "blue", "yellow", "lime", "hotpink"];
 
-export default (props) => {
+interface LBProps {
+  activeLights: any;
+  classic: string;
+  color: string;
+  rows: number;
+  cols: number;
+  onClick(): any;
+}
+
+const Litebrite: React.FC<LBProps> = (props) => {
 
   const [activeLights, setActiveLights] = useState({})
   const [selectedColor, setSelectedColor] = useState('orange')
@@ -42,7 +51,7 @@ export default (props) => {
                   id={`cols-${x}-${y}`}
                   key={`cols-${x}-${y}`}
                 >
-                  <Peg
+                  <Peg colorClass={`peg--${props.color}`}
                     onClick={() => {
                       const updatedLights = { ...activeLights };
                       const coordinateString = `${x},${y}`;
@@ -109,3 +118,5 @@ export default (props) => {
     </div>
   )
 }
+
+export default Litebrite
