@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+import LiteBrite from "./components/LiteBrite";
 import './App.css';
 
 function App() {
+  // return 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router basename={'/litebrite'}>
+      <Switch>
+      <Route exact path='/'>
+          <LiteBrite classic cols={22} rows={19} />
+        </Route>
+
+        <Route exact path='/sheet/:data' render={(props) => {
+          const activeLights = JSON.parse(atob(props.match.params.data));
+          console.log(activeLights)
+          return (
+            <LiteBrite activeLights={activeLights} classic cols={22} rows={19} />
+          )
+        }} />
+      </Switch>
+    </Router>
+  )
 }
 
 export default App;
