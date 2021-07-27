@@ -6,12 +6,14 @@ import { useHistory } from 'react-router-dom'
 const colors = ["red", "orange", "blue", "yellow", "lime", "hotpink"];
 
 interface LBProps {
-  activeLights: any;
-  classic: string;
-  color: string;
+  activeLights?: {
+    [key: string]: any
+  };
+  classic?: string;
+  color?: string;
   rows: number;
   cols: number;
-  onClick(): any;
+  // onClick(): any;
 }
 
 const Litebrite: React.FC<LBProps> = (props) => {
@@ -44,8 +46,10 @@ const Litebrite: React.FC<LBProps> = (props) => {
                   : props.cols
               )
             ).map((_, y) => {
-              const pegState = activeLights[`${x},${y}`];
+              const pegState = activeLights[`${x},${y}`]
+              //console.log(pegState)
               return (
+                
                 <div
                   className="column"
                   id={`cols-${x}-${y}`}
