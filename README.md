@@ -1,12 +1,13 @@
-Lite-Brite App with React and  Typescript
-
-Updated previous verions done in React to use Typescript
-
+## Lite-Brite App with React and Typescript
 Digital version of the old school Lite-Brite toy.
 
-<img src="screen-1.jpg" width=445 /> 
+Updated previous verion done in React to use Typescript
 
-<img src="screen-2.jpg" width=445 />
+
+
+<img src="screen-1.png" width=445 /> 
+
+<img src="screen-2.png" width=445 />
 
 
 # Getting Started with Create React App
