@@ -34,7 +34,7 @@ const Litebrite: React.FC<LBProps> = (props) => {
   return (
     <div className="wrapper">
       <div className="logo">
-        LITE*BRITE
+        LITE<span>*</span>BRITE
         {/* <span className="l" data-shadow="L">L</span>
         <span className="i" data-shadow="I">I</span>
         <span className="t">T</span>
