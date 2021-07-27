@@ -1,7 +1,7 @@
 import React from "react";
 
 interface PegProps {
-  isActive: string;
+  isActive: boolean;
   color: string;
   onClick(): any;
   colorClass: string;

@@ -13,12 +13,15 @@ interface LBProps {
   color?: string;
   rows: number;
   cols: number;
-  // onClick(): any;
 }
 
+type ActiveState = {
+  active: boolean;
+  color: string;
+}
 const Litebrite: React.FC<LBProps> = (props) => {
 
-  const [activeLights, setActiveLights] = useState({})
+  const [activeLights, setActiveLights] = useState<Record<string,ActiveState>>({})
   const [selectedColor, setSelectedColor] = useState('orange')
 
   console.log('activeLights', activeLights)
@@ -47,12 +50,11 @@ const Litebrite: React.FC<LBProps> = (props) => {
               )
             ).map((_, y) => {
               const pegState = activeLights[`${x},${y}`]
-              //console.log(pegState)
               return (
                 
                 <div
                   className="column"
-                  id={`cols-${x}-${y}`}
+                  id={`cols-${x}-${y}`} 
                   key={`cols-${x}-${y}`}
                 >
                   <Peg colorClass={`peg--${props.color}`}
