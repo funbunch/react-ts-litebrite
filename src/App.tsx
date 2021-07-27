@@ -21,8 +21,6 @@ import './App.css';
 // }
 
 const App: React.FC = () => {
-  // return 
-  // let activeLights = 'orange'
   return (
     <Router basename={'/litebrite'}>
       <Switch>
