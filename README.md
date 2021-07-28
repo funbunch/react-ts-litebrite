@@ -1,9 +1,10 @@
 ## Lite-Brite App with React and Typescript
 Digital version of the old school Lite-Brite toy.
 
-Updated previous verion done in React to use Typescript
+Updated previous verion done in React to use Typescript.
 
-
+**Click to play here:**
+[LIGHT*BRITE](https://youthful-goodall-c16374.netlify.app/litebrite/)
 
 <img src="screen-1.png" width=445 /> 
 
