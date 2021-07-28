@@ -135,14 +135,14 @@ const Litebrite: React.FC<LBProps> = (props) => {
             >
               Clear
             </button>
-            <button className="btn"
+            {/* <button className="btn"
               onClick={() => {
                 //console.log(window.location.href.url.parse)
                 const url = new URL(window.location.href)
                 console.log(url.pathname)
               }}>
                 Save
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
